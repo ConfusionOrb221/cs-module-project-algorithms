@@ -4,10 +4,10 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-    for i in arr:
-        if arr.count(i) == 1:
-            return i
-    return
+    res = arr[0]
+    for i in range(1,len(arr)):
+        res = res ^ arr[i] #xor operator will cancel out all repeating numbers to 0 leaving only the odd number out
+    return res
 
 
 if __name__ == '__main__':
