@@ -20,11 +20,11 @@ def eating_cookies(n):
     elif n == 0: #this test case doesnt make sense
         return 1
     elif n > 2:
-        ancestors = [1, 1, 2]
+        arr = [1, 1, 2]
         for i in range(n - 2):
-            ancestors.append(sum(ancestors))
-            ancestors.pop(0)
-        return ancestors[2]
+            arr.append(sum(arr))
+            arr.pop(0)
+        return arr[2]
     
     pass
 
